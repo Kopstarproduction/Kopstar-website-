@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOPSTAR PRODUCTION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: white;
+            scroll-behavior: smooth;
+        }
+        .container-xl {
+            max-width: 1280px;
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(3px);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-gray-800 bg-opacity-70 backdrop-blur-sm shadow-lg">
+        <nav class="container-xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-yellow-400">KOPSTAR</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#accueil" class="hover:text-yellow-400 transition-colors">Accueil</a>
+                <a href="#apropos" class="hover:text-yellow-400 transition-colors">À propos</a>
+                <a href="#services" class="hover:text-yellow-400 transition-colors">Services</a>
+                <a href="#reservation" class="hover:text-yellow-400 transition-colors">Boutique</a>
+                <a href="#contact" class="hover:text-yellow-400 transition-colors">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-80">
+            <div class="flex flex-col items-center py-4 space-y-4">
+                <a href="#accueil" class="hover:text-yellow-400 transition-colors">Accueil</a>
+                <a href="#apropos" class="hover:text-yellow-400 transition-colors">À propos</a>
+                <a href="#services" class="hover:text-yellow-400 transition-colors">Services</a>
+                <a href="#reservation" class="hover:text-yellow-400 transition-colors">Boutique</a>
+                <a href="#contact" class="hover:text-yellow-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+        <!-- Section Accueil -->
+        <section id="accueil" class="relative h-screen flex items-center justify-center text-center px-6">
+            <video autoplay muted loop class="video-background">
+                <!-- Replace with your actual video URL -->
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-artist-working-in-the-studio-41135-large.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+            <div class="absolute inset-0 overlay"></div>
+            <div class="relative z-10 p-8 rounded-lg">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white text-shadow mb-4">
+                    🎶 KOPSTAR PRODUCTION – La créativité en action !!! 🎶
+                </h1>
+                <p class="text-lg md:text-xl text-white text-shadow max-w-2xl mx-auto mb-8">
+                    Bienvenue chez **KOPSTAR PRODUCTION**, votre studio audiovisuel professionnel au cœur de Sèmé-Kraké. Nous transformons vos idées en créations uniques : enregistrements, mixage, mastering, clips, visuels, beats et cours de musique.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#reservation" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                        🎤 Réservez votre session studio dès aujourd’hui
+                    </a>
+                    <a href="#beats" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                        🎵 Découvrez nos beats exclusifs
+                    </a>
+                    <a href="#cours" class="bg-green-500 hover:bg-green-600 text-black font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                        🎓 Inscrivez-vous à nos cours de musique
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+        <section id="apropos" class="py-20 px-6 bg-gray-900">
+            <div class="container-xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-yellow-400">Qui sommes-nous ?</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-lg mb-6">
+                            Fondé avec passion, **KOPSTAR PRODUCTION** est un studio audiovisuel qui met la musique et l’art visuel au service des talents. Notre mission est de donner vie à vos projets musicaux et artistiques grâce à une équipe créative, des équipements professionnels et un accompagnement personnalisé.
+                        </p>
+                        <h3 class="text-2xl font-semibold mb-4 text-yellow-400">Notre Vision</h3>
+                        <p class="text-lg mb-6">
+                            Être une référence en matière de production audiovisuelle et musicale en Afrique de l’Ouest.
+                        </p>
+                        <h3 class="text-2xl font-semibold mb-4 text-yellow-400">Nos Valeurs</h3>
+                        <ul class="list-disc list-inside text-lg space-y-2">
+                            <li>🎶 Créativité</li>
+                            <li>🤝 Collaboration</li>
+                            <li>🌍 Professionnalisme</li>
+                            <li>🚀 Innovation</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/1a202c/e2e8f0?text=Kopstar+Team" alt="L'équipe de Kopstar Production" class="rounded-lg shadow-xl w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Services -->
+        <section id="services" class="py-20 px-6 bg-gray-800">
+            <div class="container-xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-yellow-400">Nos services</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">🎧 Studio d’enregistrement</h3>
+                        <p>Enregistrement, mixage et mastering pour un son professionnel de haute qualité.</p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">🎬 Clips musicaux</h3>
+                        <p>Réalisation et montage de vidéos de qualité pour donner vie à votre musique.</p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">🎨 Graphisme & visuels</h3>
+                        <p>Affiches, covers, logos, cartes de visite et d’invitation sur mesure.</p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">📢 Spots audio & vidéo</h3>
+                        <p>Création de publicités, jingles et campagnes médiatiques percutantes.</p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">🎵 Vente de beats</h3>
+                        <p>Beats exclusifs et personnalisés pour vos créations.</p>
+                        <ul class="mt-2 list-disc list-inside">
+                            <li>Prix : 20 000, 30 000 ou 50 000 FCFA</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">📜 Contrats de production</h3>
+                        <p>Formules adaptées à vos besoins :</p>
+                        <ul class="mt-2 list-disc list-inside">
+                            <li>Avec beat de l’artiste : à partir de 10 000 FCFA</li>
+                            <li>Avec beat de la maison : de 15 000 à 35 000 FCFA</li>
+                        </ul>
+                    </div>
+                    <div id="cours" class="bg-gray-900 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">🎼 Cours de musique</h3>
+                        <p>Théorie et pratique du piano, guitare, percussions, etc., en ligne et en présentiel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Réservation / Boutique -->
+        <section id="reservation" class="py-20 px-6 bg-gray-900 text-center">
+            <div class="container-xl mx-auto">
+                <h2 class="text-4xl font-bold mb-6 text-yellow-400">Réservez et achetez en ligne</h2>
+                <p class="text-lg max-w-2xl mx-auto mb-10">
+                    Planifiez votre session en studio, réservez vos cours de musique ou achetez des beats directement en ligne. Simple, rapide et sécurisé !
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex-1">
+                        <h3 class="text-2xl font-bold mb-4">🎤 Réservation studio</h3>
+                        <p>Pour un enregistrement, mixage ou mastering.</p>
+                        <a href="#contact" class="mt-4 inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
+                            Réserver maintenant
+                        </a>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex-1">
+                        <h3 class="text-2xl font-bold mb-4">🎓 Cours de musique</h3>
+                        <p>Inscrivez-vous à nos cours en ligne ou en présentiel.</p>
+                        <a href="#contact" class="mt-4 inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
+                            S'inscrire
+                        </a>
+                    </div>
+                    <div id="beats" class="bg-gray-800 p-6 rounded-lg shadow-lg flex-1">
+                        <h3 class="text-2xl font-bold mb-4">🎵 Beats exclusifs</h3>
+                        <p>Achetez un beat pour votre prochain hit.</p>
+                        <a href="#contact" class="mt-4 inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
+                            Acheter un beat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Blog (provisoire) -->
+        <section id="blog" class="py-20 px-6 bg-gray-800">
+            <div class="container-xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-yellow-400">Nos actualités & conseils</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-2">🎶 5 astuces pour améliorer vos enregistrements vocaux</h3>
+                        <p class="text-sm text-gray-400">Apprenez à optimiser vos sessions studio.</p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-2">🎸 Pourquoi apprendre un instrument booste votre créativité</h3>
+                        <p class="text-sm text-gray-400">Les bienfaits insoupçonnés de la pratique musicale.</p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-2">📹 Les coulisses de la réalisation d’un clip musical</h3>
+                        <p class="text-sm text-gray-400">Découvrez le processus de création de nos vidéos.</p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-2">🌍 La musique comme outil de communication universelle</h3>
+                        <p class="text-sm text-gray-400">Comment la musique connecte les cultures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="py-20 px-6 bg-gray-900">
+            <div class="container-xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-6 text-yellow-400">Contactez-nous</h2>
+                <p class="text-lg text-center max-w-2xl mx-auto mb-10">
+                    Une question, une réservation, un projet ? Nous sommes disponibles pour vous accompagner.
+                </p>
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <!-- Informations de contact -->
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">Informations de contact</h3>
+                        <ul class="space-y-4 text-lg">
+                            <li><a href="tel:+2290196279089" class="flex items-center hover:text-yellow-400"><svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 3.194a1 1 0 01-.29.832L5.886 9.5a11 11 0 004.628 4.628l2.438-1.542a1 1 0 01.832-.29l3.194.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-1a15 15 0 01-15-15v-1z"></path></svg>(+229) 0196279089 / 0199495850</a></li>
+                            <li><a href="https://wa.me/2290141991220" class="flex items-center hover:text-green-500"><svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.62.43 3.16 1.25 4.54L2.05 22l5.72-1.5c1.33.73 2.82 1.12 4.27 1.12 5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zm0 18.06c-1.35 0-2.7-.35-3.88-.98l-.28-.16-2.9 1.5.76-2.9-.17-.29c-.66-1.12-1.01-2.42-1.01-3.79 0-4.48 3.65-8.13 8.13-8.13s8.13 3.65 8.13 8.13-3.65 8.13-8.13 8.13zM15.14 13.91c-.13-.07-.79-.39-.93-.43-.15-.04-.26-.07-.37.07-.12.14-.46.43-.56.54-.1.11-.2.12-.37.07-.17-.05-.72-.26-.87-.41-.15-.15-.45-.49-.63-.7-.18-.2-.02-.2-.14-.2-.12 0-.26-.01-.39-.01-.13 0-.37.04-.56.24-.19.2-.72.7-.72 1.71 0 1.01.74 1.98.84 2.11.1.13 1.45 2.22 3.51 3.12 1.5.64 2.05.7 2.62.63.18-.02.58-.24.67-.48.1-.24.1-.45.06-.89-.04-.44-.15-.7-.25-.86-.1-.16-.24-.22-.5-.22z"></path></svg>(+229) 0141991220</a></li>
+                            <li><a href="mailto:kopstarprod@gmail.com" class="flex items-center hover:text-yellow-400"><svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884zM18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>kopstarprod@gmail.com</a></li>
+                            <li class="flex items-center"><svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 00-8 8c0 3.73 2.043 6.94 5 8.65V14h-2v-4h2V8h2v2h4v2h-2v4.65c2.957-1.71 5-4.92 5-8.65a8 8 0 00-8-8z"></path></svg>Sèmé-Kraké, Bénin</li>
+                        </ul>
+                    </div>
+                    <!-- Formulaire de contact -->
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                        <form id="contactForm">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-400">Nom</label>
+                                <input type="text" id="name" name="name" class="w-full bg-gray-700 text-white border border-gray-600 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-400">Email</label>
+                                <input type="email" id="email" name="email" class="w-full bg-gray-700 text-white border border-gray-600 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-400">Sujet</label>
+                                <input type="text" id="subject" name="subject" class="w-full bg-gray-700 text-white border border-gray-600 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-400">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full bg-gray-700 text-white border border-gray-600 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-500" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-md shadow-lg transition-transform transform hover:scale-105">
+                                Envoyer
+                            </button>
+                            <div id="form-status" class="mt-4 text-center"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 px-6 text-center">
+        <div class="container-xl mx-auto">
+            <p>&copy; 2024 KOPSTAR PRODUCTION. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form submission (placeholder)
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('form-status');
+        contactForm.addEventListener('subm
